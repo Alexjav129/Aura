@@ -1,16 +1,20 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
+import MainLogo from "../MainLogo/MainLogo";
 
 const NavBar = () => {
   return (
     <header>
-      <h1>Marolio Online</h1>
+      <div className="logoAndName">
+        <MainLogo />
+        <h1>Aura</h1>
+      </div>
 
       <nav>
         <ul>
-          <li>Lacteos</li>
-          <li>Bebidas</li>
-          <li>Almacen</li>
+          <li>Necklaces</li>
+          <li>Rings</li>
+          <li>Water Bottles</li>
         </ul>
       </nav>
 

@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <NavBar />
-      <ItemListContainer greeting="Hola Mundo" />
+      <ItemListContainer greeting="The best way to get what you want in life is to deserve what you want" />
     </div>
   );
 };
