@@ -1,5 +1,5 @@
 import CartWidget from "../CartWidget/CartWidget";
-import "./NavBar.css";
+import "./NavBar.scss";
 import MainLogo from "../MainLogo/MainLogo";
 
 const NavBar = () => {

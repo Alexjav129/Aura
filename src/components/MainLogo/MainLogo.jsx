@@ -1,4 +1,4 @@
-import "./MainLogo.css";
+import "./MainLogo.scss";
 
 const MainLogo = () => {
   const imgLogo =
