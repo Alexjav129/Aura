@@ -1,6 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
-import "./NavBar.scss";
 import MainLogo from "../MainLogo/MainLogo";
+import "./NavBar.scss";
 
 const NavBar = () => {
   return (
