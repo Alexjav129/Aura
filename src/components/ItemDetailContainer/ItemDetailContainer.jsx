@@ -4,7 +4,10 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
+  const [producto, setProducto] = useState();
   return <div>ItemDetailContainer</div>;
 };
 
 export default ItemDetailContainer;
+
+// minuto 1:29:57 clase 5
