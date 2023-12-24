@@ -11,14 +11,14 @@ const productos = [
     nombre: "Necklace 2",
     precio: 500,
     img: "./img/prod1.jpeg",
-    idCat: "2",
+    idCat: "1",
   },
   {
     id: "3",
     nombre: "Ring 1",
     precio: 500,
     img: "./img/prod1.jpeg",
-    idCat: "3",
+    idCat: "2",
   },
   {
     id: "4",

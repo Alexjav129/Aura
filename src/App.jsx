@@ -7,6 +7,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route
             path="/"
@@ -23,8 +24,6 @@ const App = () => {
           <Route path="/item:idItem" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
-
-      <NavBar />
     </div>
   );
 };
