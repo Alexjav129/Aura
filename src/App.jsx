@@ -16,12 +16,12 @@ const App = () => {
             }
           />
           <Route
-            path="/categoria/id:Categoria"
+            path="/categoria/:idCategoria"
             element={
               <ItemListContainer greeting="The best way to get what you want in life is to deserve what you want" />
             }
           />
-          <Route path="/item:idItem" element={<ItemDetailContainer />} />
+          <Route path="/item/:idItem" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
     </div>
