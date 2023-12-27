@@ -20,5 +20,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-
-// minuto 1:29:57 clase 5

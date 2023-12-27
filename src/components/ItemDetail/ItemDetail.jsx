@@ -1,8 +1,8 @@
-import React from "react";
+import "./ItemDetail.scss";
 
 const ItemDetail = ({ id, nombre, precio, img }) => {
   return (
-    <div>
+    <div className="contenedorItem">
       <h2>Product: {nombre} </h2>
       <p>Price: {precio} </p>
       <p>ID: {id}</p>
