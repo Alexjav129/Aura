@@ -3,14 +3,21 @@ import React from "react";
 const ItemDetail = ({ id, nombre, precio, img }) => {
   return (
     <div>
-      <h2>Nombre: {nombre} </h2>
-      <p>Precio: {precio} </p>
+      <h2>Product: {nombre} </h2>
+      <p>Price: {precio} </p>
       <p>ID: {id}</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-        veritatis rem cumque? Reiciendis nemo natus ducimus possimus
-        reprehenderit blanditiis qui eligendi adipisci accusantium, quibusdam
-        quisquam laudantium aspernatur voluptas non nostrum.
+        Aura bracelets transcend mere jewelry; they symbolize a philosophy
+        centered on equilibrium, consciousness, and self-reflection.
+      </p>
+      <p>
+        Embracing Harmony: In moments of triumph and accomplishment, Aura
+        encourages staying grounded, fostering humility and appreciation,
+        reminding us of our origins and the journey traveled.
+      </p>
+      <p>
+        Aura bracelets act as daily cues for mindfulness, prompting us to
+        embrace the present, treasure the peaks, and endure the valleys of life.
       </p>
       <img src={img} alt={nombre} />
     </div>

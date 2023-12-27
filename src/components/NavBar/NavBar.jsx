@@ -8,7 +8,7 @@ const NavBar = () => {
     <header>
       <div className="logoAndName">
         <MainLogo />
-        <Link to="/">
+        <Link className="home" to="/">
           <h1>Aura</h1>
         </Link>
       </div>
@@ -16,13 +16,19 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="categoria/1">Necklaces</NavLink>
+            <NavLink className="link" to="categoria/1">
+              Necklaces
+            </NavLink>
           </li>
           <li>
-            <NavLink to="categoria/2">Rings</NavLink>
+            <NavLink className="link" to="categoria/2">
+              Rings
+            </NavLink>
           </li>
           <li>
-            <NavLink to="categoria/3">Water Bottles</NavLink>
+            <NavLink className="link" to="categoria/3">
+              Water Bottles
+            </NavLink>
           </li>
         </ul>
       </nav>
