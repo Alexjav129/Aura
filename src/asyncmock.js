@@ -2,6 +2,7 @@ const productos = [
   {
     id: "1",
     nombre: "Necklace 1",
+    stock: 10,
     precio: 500,
     img: "../img/prod1.jpeg",
     idCat: "1",
@@ -9,6 +10,7 @@ const productos = [
   {
     id: "2",
     nombre: "Necklace 2",
+    stock: 10,
     precio: 500,
     img: "../img/prod2.jpeg",
     idCat: "1",
@@ -16,6 +18,7 @@ const productos = [
   {
     id: "3",
     nombre: "Ring 1",
+    stock: 10,
     precio: 500,
     img: "../img/prod3.jpeg",
     idCat: "2",
@@ -23,6 +26,7 @@ const productos = [
   {
     id: "4",
     nombre: "Water Bottle 1",
+    stock: 10,
     precio: 500,
     img: "../img/prod4.jpeg",
     idCat: "3",

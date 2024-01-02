@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const ItemCount = ({ inicial, stock, funcionAgregar }) => {
   const [contador, setCotnador] = useState(inicial);
@@ -16,11 +16,16 @@ const ItemCount = ({ inicial, stock, funcionAgregar }) => {
   };
 
   return (
-    <div>
-      <button>- </button>
-      <p></p>
-      <button></button>
-    </div>
+    <>
+      <button onClick={restarContador}> - </button>
+      <p>{contador}</p>
+      <button onClick={sumarContador}> + </button>
+
+      <button onClick={() => funcionAgregar(contador)}>
+        {" "}
+        Agregar al Carrito
+      </button>
+    </>
   );
 };
 

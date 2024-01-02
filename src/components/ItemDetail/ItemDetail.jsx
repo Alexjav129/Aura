@@ -1,6 +1,19 @@
+import { useState } from "react";
+import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 import "./ItemDetail.scss";
 
-const ItemDetail = ({ id, nombre, precio, img }) => {
+const ItemDetail = ({ id, nombre, stock, precio, img }) => {
+  // Se crea un estado local con la cantidad de productos agregados
+
+  const [agregarCantidad, setAgregarCantidad] = useState(0);
+
+  // Se crea una funcion manejadora de la cantidad:
+  const manejadorCantidad = (cantidad) => {
+    setAgregarCantidad(cantidad);
+    console.log("Productos agregados: " + cantidad);
+  };
+
   return (
     <div className="contenedorItem">
       <h2>Product: {nombre} </h2>
@@ -20,6 +33,15 @@ const ItemDetail = ({ id, nombre, precio, img }) => {
         embrace the present, treasure the peaks, and endure the valleys of life.
       </p>
       <img src={img} alt={nombre} />
+      {agregarCantidad > 0 ? (
+        <Link to="/cart">Terminar Compra</Link>
+      ) : (
+        <ItemCount
+          inicial={1}
+          stock={stock}
+          funcionAgregar={manejadorCantidad}
+        />
+      )}
     </div>
   );
 };
