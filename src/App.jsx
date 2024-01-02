@@ -17,11 +17,13 @@ const App = () => {
           />
           <Route
             path="/categoria/:idCategoria"
-            element={
-              <ItemListContainer greeting="The best way to get what you want in life is to deserve what you want" />
-            }
+            element={<ItemListContainer />}
           />
           <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+          <Route
+            path="/cart"
+            element={<h2>In a few minutes you will have you cart</h2>}
+          />
         </Routes>
       </BrowserRouter>
     </div>
