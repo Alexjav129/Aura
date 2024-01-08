@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { getUnProducto } from "../../asyncmock";
+// import { getUnProducto } from "../../asyncmock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { db } from "../../services/config";
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
