@@ -9,12 +9,7 @@ const App = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <ItemListContainer greeting="The best way to get what you want in life is to deserve what you want" />
-            }
-          />
+          <Route path="/" element={<ItemListContainer />} />
           <Route
             path="/categoria/:idCategoria"
             element={<ItemListContainer />}

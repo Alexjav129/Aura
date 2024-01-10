@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-// import { getProducts, getProductosPorCategoria } from "../../asyncmock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../services/config";
 import { collection, getDocs, where, query } from "firebase/firestore";
 import "./ItemListContianer.scss";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const { idCategoria } = useParams();
 
