@@ -2,3 +2,9 @@
   width: 50px;
   margin-right: 3px;
 }
+
+@media (max-width: 490px) {
+  .cartNumber {
+    margin-left: 3rem;
+  }
+}
