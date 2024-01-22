@@ -4,7 +4,8 @@ import { db } from "../../services/config";
 import { collection, addDoc } from "firebase/firestore";
 
 const Checkout = () => {
-  const { carrito, vaciarCarrito } = useContext(CarritoContext);
+  const { carrito, vaciarCarrito, total, cantidadTotal } =
+    useContext(CarritoContext);
 
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
@@ -14,11 +15,55 @@ const Checkout = () => {
   const [orderId, setOrderId] = useState("");
   const [error, setError] = useState("");
 
+  const manejadorSubmit = (event) => {
+    event.preventDefault(); // para que no se recargue la pagina
+
+    // se verifica que todos los campos estén completos
+    if (!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
+      setError("You did not check all the required fields");
+      return;
+    }
+
+    // Se valida que los campos de email sean iguales
+    if (email !== emailConfirmacion) {
+      setError("Emails do not match");
+      return;
+    }
+
+    // Si pasa las 2 validaciones se crea un objeto con todos los datos de la orden de compra
+
+    const orden = {
+      items: carrito.map((producto) => ({
+        id: producto.item.id,
+        nombre: producto.item.nombre,
+        cantidad: producto.cantidad,
+      })),
+      total: total,
+      fecha: new Date(),
+      nombre,
+      apellido,
+      telefono,
+      email,
+    };
+
+    // Guardar la orden de compras en al base de datos
+    addDoc(collection(db, "orders"), orden);
+      .then(docRef => {
+        setOrderId(docRef.id);
+        // una vez que se termina la simulación de venta, se tiene que vaciar el carrito
+        vaciarCarrito()
+      })
+      .catch(error => {
+        console.log("Unable to create your order", error);
+        setError("Unable to create your order")
+      })
+  };
+
   return (
     <div>
       <h2>Checkout</h2>
 
-      <form>
+      <form onSubmit={manejadorSubmit}>
         {carrito.map((producto) => (
           <div key={producto.item.id}>
             <p>
