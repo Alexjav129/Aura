@@ -121,11 +121,10 @@
 // export default Checkout;
 
 // Descuenta Stock
-
 import { useState, useEffect, useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../services/config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, getDoc, doc } from "firebase/firestore";
 
 const Checkout = () => {
   const { carrito, vaciarCarrito, total, cantidadTotal } =
@@ -193,10 +192,11 @@ const Checkout = () => {
             <p>
               {producto.item.nombre} x {producto.cantidad}
             </p>
-            <p>Precio: $ {producto.item.precio}</p>
+            <p>Price per product: $ {producto.item.precio}</p>
             <hr />
           </div>
         ))}
+        <p>Total Items: {cantidadTotal}</p>
         <hr />
 
         <div>
