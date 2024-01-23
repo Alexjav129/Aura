@@ -95,6 +95,7 @@ const Checkout = () => {
           </div>
         ))}
         <p>Total Items: {cantidadTotal}</p>
+        <p>Total Order Amount: {total}</p>
         <hr />
 
         <div className="labelsAndInputs">
