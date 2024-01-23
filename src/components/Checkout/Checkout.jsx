@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, getDoc, doc } from "firebase/firestore";
+import "./Checkout.scss";
 
 const Checkout = () => {
   const { carrito, vaciarCarrito, total, cantidadTotal } =
@@ -83,7 +84,7 @@ const Checkout = () => {
     <div>
       <h2>Checkout</h2>
 
-      <form onSubmit={manejadorSubmit}>
+      <form onSubmit={manejadorSubmit} className="formulario">
         {carrito.map((producto) => (
           <div key={producto.item.id}>
             <p>
@@ -96,27 +97,27 @@ const Checkout = () => {
         <p>Total Items: {cantidadTotal}</p>
         <hr />
 
-        <div>
+        <div className="labelsAndInputs">
           <label htmlFor="">Name</label>
           <input type="text" onChange={(e) => setNombre(e.target.value)} />
         </div>
 
-        <div>
+        <div className="labelsAndInputs">
           <label htmlFor="">Last Name</label>
           <input type="text" onChange={(e) => setApellido(e.target.value)} />
         </div>
 
-        <div>
+        <div className="labelsAndInputs">
           <label htmlFor="">Phone</label>
           <input type="text" onChange={(e) => setTelefono(e.target.value)} />
         </div>
 
-        <div>
+        <div className="labelsAndInputs">
           <label htmlFor="">Email</label>
           <input type="email" onChange={(e) => setEmail(e.target.value)} />
         </div>
 
-        <div>
+        <div className="labelsAndInputs">
           <label htmlFor="">Email Confirmation</label>
           <input
             type="email"
@@ -126,11 +127,14 @@ const Checkout = () => {
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
-        <button type="submbit">Complete Order</button>
+        <button type="submit" className="submitBtn">
+          Complete Order
+        </button>
 
         {orderId && (
-          <strong>
-            We are thrilled to have you as our customer. Your orderId is:
+          <strong className="orderId">
+            We are thrilled to have you as our customer.
+            <br /> Your orderId is:
             {orderId}
           </strong>
         )}
