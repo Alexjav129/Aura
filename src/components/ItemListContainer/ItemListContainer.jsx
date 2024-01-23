@@ -27,15 +27,6 @@ const ItemListContainer = () => {
       );
   }, [idCategoria]);
 
-  // ! Este codigo se va porque ahora se tiene que levantar la información ya no de asynmock.js sino de Firebase
-  // useEffect(() => {
-  //   const funcionProductos = idCategoria
-  //     ? getProductosPorCategoria
-  //     : getProducts;
-
-  //   funcionProductos(idCategoria).then((respuesta) => setProductos(respuesta));
-  // }, [idCategoria]);
-
   return (
     <div>
       <h2>Products</h2>
