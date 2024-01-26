@@ -1,17 +1,17 @@
 .cartContent {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
   justify-content: center;
+  margin: 2rem;
 }
 
-.btn {
+.deleteBtn {
   background-color: gray;
   color: aliceblue;
   border-radius: 10px;
   border: none;
   padding: 10px 20px;
-  text-decoration: none;
+  text-decoration: line-through;
 }
 
 .btn:hover {
