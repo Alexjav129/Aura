@@ -16,6 +16,9 @@ li {
   cursor: pointer;
   color: grey;
 }
+:hover {
+  color: black;
+}
 
 .logoAndName {
   display: flex;
@@ -33,6 +36,9 @@ li {
   font-size: 17px;
   margin: 40px;
   font-weight: bolder;
+}
+:hover {
+  color: black;
 }
 
 @media (max-width: 841px) {
