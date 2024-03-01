@@ -1,6 +1,6 @@
 # Aura 🌟
 
-Welcome to Aura, a basic e-commerce project where you can find a delightful collection of rings, necklaces, water bottles, and bracelets.
+Welcome to Aura, an e-commerce project where you can find a delightful collection of rings, necklaces and water bottles.
 
 The application allows you to explore a variety of products and make seamless online purchases. All product details and purchase orders are securely stored in Firebase.
 
